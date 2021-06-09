@@ -55,8 +55,7 @@ function timer_callback()
 end
 
 function convert_realtime_to_vanatime(timediff)
-	local vtimediff = timediff * 25
-	local vtime = vorigin + vtimediff
+	local vtime = vorigin + (timediff * 25)
 	
 	local vWeek = math.floor(vtime / (24 * 60 * 60)) % 8 + 1
 	local vMoon = math.floor( (vtime + 24 * 60 * 60 * 2) / (24 * 60 * 60 * 7)) % 12 + 1
